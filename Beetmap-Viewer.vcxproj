@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b4e43093-e18d-4fa8-a0c9-0249f0d396cd}</ProjectGuid>
+    <RootNamespace>BeetmapViewer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BEETMAPVIEWER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>minhook\include;chocolate-doom\src;.\;SDL2-2.0.22\include;chocolate-doom\pcsound;SDL2_mixer-2.0.4\include;chocolate-doom\textscreen;chocolate-doom\opl;dirent\include;SDL2_net-2.0.1\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>SDL2-2.0.22\lib\x86;SDL2_mixer-2.0.4\lib\x86;SDL2_net-2.0.1\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);SDL2.lib;SDL2_mixer.lib;SDL2_net.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BEETMAPVIEWER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>minhook\include;chocolate-doom\src;.\;SDL2-2.0.22\include;chocolate-doom\pcsound;SDL2_mixer-2.0.4\include;chocolate-doom\textscreen;chocolate-doom\opl;dirent\include;SDL2_net-2.0.1\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>SDL2-2.0.22\lib\x86;SDL2_mixer-2.0.4\lib\x86;SDL2_net-2.0.1\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);SDL2.lib;SDL2_mixer.lib;SDL2_net.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BEETMAPVIEWER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>minhook\include;chocolate-doom\src;.\;SDL2-2.0.22\include;chocolate-doom\pcsound;SDL2_mixer-2.0.4\include;chocolate-doom\textscreen;chocolate-doom\opl;dirent\include;SDL2_net-2.0.1\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>SDL2-2.0.22\lib\x86;SDL2_mixer-2.0.4\lib\x86;SDL2_net-2.0.1\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);SDL2.lib;SDL2_mixer.lib;SDL2_net.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BEETMAPVIEWER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>minhook\include;chocolate-doom\src;.\;SDL2-2.0.22\include;chocolate-doom\pcsound;SDL2_mixer-2.0.4\include;chocolate-doom\textscreen;chocolate-doom\opl;dirent\include;SDL2_net-2.0.1\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>SDL2-2.0.22\lib\x86;SDL2_mixer-2.0.4\lib\x86;SDL2_net-2.0.1\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);SDL2.lib;SDL2_mixer.lib;SDL2_net.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="chocolate-doom\opl\ioperm_sys.c" />
+    <ClCompile Include="chocolate-doom\opl\opl.c" />
+    <ClCompile Include="chocolate-doom\opl\opl3.c" />
+    <ClCompile Include="chocolate-doom\opl\opl_linux.c" />
+    <ClCompile Include="chocolate-doom\opl\opl_obsd.c" />
+    <ClCompile Include="chocolate-doom\opl\opl_queue.c" />
+    <ClCompile Include="chocolate-doom\opl\opl_sdl.c" />
+    <ClCompile Include="chocolate-doom\opl\opl_timer.c" />
+    <ClCompile Include="chocolate-doom\opl\opl_win32.c" />
+    <ClCompile Include="chocolate-doom\pcsound\pcsound.c" />
+    <ClCompile Include="chocolate-doom\pcsound\pcsound_bsd.c" />
+    <ClCompile Include="chocolate-doom\pcsound\pcsound_linux.c" />
+    <ClCompile Include="chocolate-doom\pcsound\pcsound_sdl.c" />
+    <ClCompile Include="chocolate-doom\pcsound\pcsound_win32.c" />
+    <ClCompile Include="chocolate-doom\src\aes_prng.c" />
+    <ClCompile Include="chocolate-doom\src\deh_io.c" />
+    <ClCompile Include="chocolate-doom\src\deh_main.c" />
+    <ClCompile Include="chocolate-doom\src\deh_mapping.c" />
+    <ClCompile Include="chocolate-doom\src\deh_str.c" />
+    <ClCompile Include="chocolate-doom\src\deh_text.c" />
+    <ClCompile Include="chocolate-doom\src\doom\am_map.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_ammo.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_bexstr.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_cheat.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_doom.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_frame.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_misc.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_ptr.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_sound.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_thing.c" />
+    <ClCompile Include="chocolate-doom\src\doom\deh_weapon.c" />
+    <ClCompile Include="chocolate-doom\src\doom\doomdef.c" />
+    <ClCompile Include="chocolate-doom\src\doom\doomstat.c" />
+    <ClCompile Include="chocolate-doom\src\doom\dstrings.c" />
+    <ClCompile Include="chocolate-doom\src\doom\d_items.c" />
+    <ClCompile Include="chocolate-doom\src\doom\d_main.c" />
+    <ClCompile Include="chocolate-doom\src\doom\d_net.c" />
+    <ClCompile Include="chocolate-doom\src\doom\f_finale.c" />
+    <ClCompile Include="chocolate-doom\src\doom\f_wipe.c" />
+    <ClCompile Include="chocolate-doom\src\doom\g_game.c" />
+    <ClCompile Include="chocolate-doom\src\doom\hu_lib.c" />
+    <ClCompile Include="chocolate-doom\src\doom\hu_stuff.c" />
+    <ClCompile Include="chocolate-doom\src\doom\info.c" />
+    <ClCompile Include="chocolate-doom\src\doom\m_menu.c" />
+    <ClCompile Include="chocolate-doom\src\doom\m_random.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_ceilng.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_doors.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_enemy.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_floor.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_inter.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_lights.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_map.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_maputl.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_mobj.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_plats.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_pspr.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_saveg.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_setup.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_sight.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_spec.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_switch.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_telept.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_tick.c" />
+    <ClCompile Include="chocolate-doom\src\doom\p_user.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_bsp.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_data.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_draw.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_main.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_plane.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_segs.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_sky.c" />
+    <ClCompile Include="chocolate-doom\src\doom\r_things.c" />
+    <ClCompile Include="chocolate-doom\src\doom\sounds.c" />
+    <ClCompile Include="chocolate-doom\src\doom\statdump.c" />
+    <ClCompile Include="chocolate-doom\src\doom\st_lib.c" />
+    <ClCompile Include="chocolate-doom\src\doom\st_stuff.c" />
+    <ClCompile Include="chocolate-doom\src\doom\s_sound.c" />
+    <ClCompile Include="chocolate-doom\src\doom\wi_stuff.c" />
+    <ClCompile Include="chocolate-doom\src\d_event.c" />
+    <ClCompile Include="chocolate-doom\src\d_iwad.c" />
+    <ClCompile Include="chocolate-doom\src\d_loop.c" />
+    <ClCompile Include="chocolate-doom\src\d_mode.c" />
+    <ClCompile Include="chocolate-doom\src\gusconf.c" />
+    <ClCompile Include="chocolate-doom\src\i_cdmus.c" />
+    <ClCompile Include="chocolate-doom\src\i_endoom.c" />
+    <ClCompile Include="chocolate-doom\src\i_glob.c" />
+    <ClCompile Include="chocolate-doom\src\i_input.c" />
+    <ClCompile Include="chocolate-doom\src\i_joystick.c" />
+    <ClCompile Include="chocolate-doom\src\i_musicpack.c" />
+    <ClCompile Include="chocolate-doom\src\i_oplmusic.c" />
+    <ClCompile Include="chocolate-doom\src\i_pcsound.c" />
+    <ClCompile Include="chocolate-doom\src\i_sdlmusic.c" />
+    <ClCompile Include="chocolate-doom\src\i_sdlsound.c" />
+    <ClCompile Include="chocolate-doom\src\i_sound.c" />
+    <ClCompile Include="chocolate-doom\src\i_system.c" />
+    <ClCompile Include="chocolate-doom\src\i_timer.c" />
+    <ClCompile Include="chocolate-doom\src\i_video.c" />
+    <ClCompile Include="chocolate-doom\src\memio.c" />
+    <ClCompile Include="chocolate-doom\src\midifile.c" />
+    <ClCompile Include="chocolate-doom\src\mus2mid.c" />
+    <ClCompile Include="chocolate-doom\src\m_argv.c" />
+    <ClCompile Include="chocolate-doom\src\m_bbox.c" />
+    <ClCompile Include="chocolate-doom\src\m_cheat.c" />
+    <ClCompile Include="chocolate-doom\src\m_config.c" />
+    <ClCompile Include="chocolate-doom\src\m_controls.c" />
+    <ClCompile Include="chocolate-doom\src\m_fixed.c" />
+    <ClCompile Include="chocolate-doom\src\m_misc.c" />
+    <ClCompile Include="chocolate-doom\src\net_client.c" />
+    <ClCompile Include="chocolate-doom\src\net_common.c" />
+    <ClCompile Include="chocolate-doom\src\net_dedicated.c" />
+    <ClCompile Include="chocolate-doom\src\net_gui.c" />
+    <ClCompile Include="chocolate-doom\src\net_io.c" />
+    <ClCompile Include="chocolate-doom\src\net_loop.c" />
+    <ClCompile Include="chocolate-doom\src\net_packet.c" />
+    <ClCompile Include="chocolate-doom\src\net_petname.c" />
+    <ClCompile Include="chocolate-doom\src\net_query.c" />
+    <ClCompile Include="chocolate-doom\src\net_sdl.c" />
+    <ClCompile Include="chocolate-doom\src\net_server.c" />
+    <ClCompile Include="chocolate-doom\src\net_structrw.c" />
+    <ClCompile Include="chocolate-doom\src\sha1.c" />
+    <ClCompile Include="chocolate-doom\src\tables.c" />
+    <ClCompile Include="chocolate-doom\src\v_diskicon.c" />
+    <ClCompile Include="chocolate-doom\src\v_video.c" />
+    <ClCompile Include="chocolate-doom\src\w_checksum.c" />
+    <ClCompile Include="chocolate-doom\src\w_file.c" />
+    <ClCompile Include="chocolate-doom\src\w_file_posix.c" />
+    <ClCompile Include="chocolate-doom\src\w_file_stdc.c" />
+    <ClCompile Include="chocolate-doom\src\w_file_win32.c" />
+    <ClCompile Include="chocolate-doom\src\w_main.c" />
+    <ClCompile Include="chocolate-doom\src\w_merge.c" />
+    <ClCompile Include="chocolate-doom\src\w_wad.c" />
+    <ClCompile Include="chocolate-doom\src\z_zone.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_button.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_checkbox.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_conditional.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_desktop.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_dropdown.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_fileselect.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_gui.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_inputbox.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_io.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_label.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_radiobutton.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_scrollpane.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_sdl.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_separator.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_spinctrl.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_strut.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_table.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_utf8.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_widget.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_window.c" />
+    <ClCompile Include="chocolate-doom\textscreen\txt_window_action.c" />
+    <ClCompile Include="beetmap_viewer_main.c" />
+    <ClCompile Include="minhook\src\buffer.c" />
+    <ClCompile Include="minhook\src\hde\hde32.c" />
+    <ClCompile Include="minhook\src\hde\hde64.c" />
+    <ClCompile Include="minhook\src\hook.c" />
+    <ClCompile Include="minhook\src\trampoline.c" />
+    <ClCompile Include="beetmap_viewer_doom.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chocolate-doom\src\i_winmusic.h" />
+    <ClInclude Include="config.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

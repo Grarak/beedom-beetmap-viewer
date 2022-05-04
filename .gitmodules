@@ -1,0 +1,9 @@
+[submodule "chocolate-doom"]
+	path = chocolate-doom
+	url = https://github.com/Grarak/beedoom-chocolate-doom.git
+[submodule "minhook"]
+	path = minhook
+	url = https://github.com/TsudaKageyu/minhook.git
+[submodule "dirent"]
+	path = dirent
+	url = https://github.com/tronkko/dirent.git
